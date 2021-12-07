@@ -3,10 +3,14 @@
     margin: 0;
     padding: 0;
 }
+html{
+    height: 100%;
+}
 
 body{
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
+    min-height: 100%;
 }
 
 .grid-container>*{
@@ -14,4 +18,36 @@ body{
     border-radius: 4px;
     padding: 10px;
     text-align: center;
+}
+
+.header{
+    grid-area: header;
+    background-color: salmon;
+}
+.navbar{
+    grid-area: navbar;
+    background-color: sandybrown;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: silver;
+}
+.main{
+    grid-area: main;
+    background-color: tan;
+}
+.footer{
+    grid-area: footer;
+    background-color: thistle;
+}
+
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "main"
+    "sidebar"
+    "footer";
 }
